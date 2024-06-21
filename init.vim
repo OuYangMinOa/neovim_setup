@@ -15,6 +15,7 @@ Plug 'codota/tabnine-nvim', { 'do': 'pwsh.exe -file ./dl_binaries.ps1' }
 Plug 'tzachar/cmp-tabnine', { 'do': 'powershell ./install.ps1' }
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'debugloop/telescope-undo.nvim'
 Plug 'lazywei/vim-doc-tw'
 Plug 'navarasu/onedark.nvim'
 Plug 'pablopunk/native-sidebar.vim' 
@@ -57,11 +58,13 @@ nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
 map <C-_> gcl
 
 "Select auto complete
-imap <C-CR> <C-y> 
+imap <C-CR> <C-y><Left><Right>
 
 "save file
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> <ESC>:w<CR>
+
+nnoremap <C-r> :Telescope undo<CR>
 
 lua <<EOF
 
@@ -104,10 +107,9 @@ require('tabnine').setup({
   log_file_path = nil, -- absolute path to Tabnine log file
 })
 
+require("telescope").load_extension("undo")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-
-
 
 
 

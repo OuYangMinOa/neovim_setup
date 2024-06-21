@@ -52,16 +52,16 @@ nnoremap <A-a> :lua require("harpoon.mark").add_file()<CR>
 nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
 "nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
 "nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
+
+"Comment line
 map <C-_> gcl
+
+"Select auto complete
 imap <C-CR> <C-y> 
+
+"save file
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> <ESC>:w<CR>
-
-
-
-
-
-
 
 lua <<EOF
 

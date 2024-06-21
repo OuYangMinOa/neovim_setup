@@ -50,8 +50,22 @@ nnoremap <C-x> <C-v>
 nnoremap <A-f> :lua require("harpoon.ui").toggle_quick_menu()<CR>
 nnoremap <A-a> :lua require("harpoon.mark").add_file()<CR>
 nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
-nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
+"nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
+"nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
+map <C-_> gcl
+imap <C-CR> <C-y> 
+inoremap <C-s> <ESC>:w<CR>
+nnoremap <C-s> <ESC>:w<CR>
+
+
+
+
+
+
+
 lua <<EOF
+
+
 
 local cmp = require('cmp')
 

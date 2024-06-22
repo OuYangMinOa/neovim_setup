@@ -51,8 +51,8 @@ nnoremap <C-x> <C-v>
 nnoremap <A-f> :lua require("harpoon.ui").toggle_quick_menu()<CR>
 nnoremap <A-a> :lua require("harpoon.mark").add_file()<CR>
 nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
+nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
 "nnoremap <A-[> :lua require("harpoon.ui").nav_next()<CR>
-"nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
 
 "Comment line
 map <C-_> gcl
@@ -64,7 +64,8 @@ imap <C-CR> <C-y><Left><Right>
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> <ESC>:w<CR>
 
-nnoremap <C-r> :Telescope undo<CR>
+"undo tree
+nnoremap <A-e> :Telescope undo<CR>
 
 lua <<EOF
 

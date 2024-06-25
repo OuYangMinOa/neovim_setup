@@ -1,5 +1,6 @@
 lua require("OuYang")
 
+
 call plug#begin()
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-tree/nvim-tree.lua'
@@ -20,6 +21,7 @@ Plug 'lazywei/vim-doc-tw'
 Plug 'navarasu/onedark.nvim'
 Plug 'pablopunk/native-sidebar.vim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
 lua require("toggleterm").setup()
@@ -32,6 +34,8 @@ let g:native_sidebar_shortcut = '<c-t>'
 set number
 set encoding=UTF-8
 set relativenumber
+set tabstop=4
+set shiftwidth=4
 
 nnoremap <A-DOWN> :m .+1<CR>==
 nnoremap <A-UP> :m .-2<CR>==
@@ -57,6 +61,10 @@ nnoremap <A-]> :lua require("harpoon.ui").nav_prev()<CR>
 "Comment line
 map <C-_> gcl
 
+"search word with ctrl-f
+nnoremap <C-f> <Esc>/
+inoremap <C-f> <Esc>/
+
 "Select auto complete
 imap <C-CR> <C-y><Left><Right>
 
@@ -64,33 +72,16 @@ imap <C-CR> <C-y><Left><Right>
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> <ESC>:w<CR>
 
+"map <C-c> <y>
+"inoremap <A-b> <Esc><p>
+
+
+
 "undo tree
 nnoremap <A-e> :Telescope undo<CR>
 
 lua <<EOF
 
-
-
-local cmp = require('cmp')
-
-
-cmp.setup({
-sources = cmp.config.sources({name = "cmp_tabnine"}),
-})
-local tabnine = require('cmp_tabnine.config')
-tabnine:setup({
-	max_lines = 1000,
-	max_num_results = 20,
-	sort = true,
-	run_on_every_keystroke = true,
-	snippet_placeholder = '..',
-	ignored_file_types = {
-		-- default is not to ignore
-		-- uncomment to ignore in lua:
-		-- lua = true
-	},
-	min_percent = 0
-})
 local function tabnine_build_path()
   if vim.loop.os_uname().sysname == "Windows_NT" then
     return "pwsh.exe -file .\\dl_binaries.ps1"
@@ -102,7 +93,7 @@ require('tabnine').setup({
   disable_auto_comment=true,
   accept_keymap="<Tab>",
   dismiss_keymap = "<C-]>",
-  debounce_ms = 800,
+  debounce_ms = 200,
   suggestion_color = {gui = "#808080", cterm = 244},
   exclude_filetypes = {"TelescopePrompt", "NvimTree"},
   log_file_path = nil, -- absolute path to Tabnine log file
@@ -112,6 +103,19 @@ require("telescope").load_extension("undo")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 
-
+require'treesitter-context'.setup{
+  enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+  max_lines = 3, -- How many lines the window should span. Values <= 0 mean no limit.
+  min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+  line_numbers = true,
+  multiline_threshold = 20, -- Maximum number of lines to show for a single context
+  trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+  mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+  -- Separator between context and content. Should be a single character string, like '-'.
+  -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+  separator = nil,
+  zindex = 20, -- The Z-index of the context window
+  on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+}
 
 EOF

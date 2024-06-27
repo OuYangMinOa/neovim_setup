@@ -22,6 +22,7 @@ Plug 'navarasu/onedark.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'pablopunk/native-sidebar.vim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'chentoast/marks.nvim'
 Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
@@ -147,8 +148,19 @@ require'treesitter-context'.setup{
 }
 
 require("catppuccin").setup({
-flavour = "macchiato",
-transparent_background = true,
+	flavour = "macchiato",
+	background ="#000000",
+	transparent_background = true,
 })
 vim.cmd.colorscheme "catppuccin"
+
+require('marks').setup( {
+	default_mappings = true,
+	builtin_marks = { ".", "<", ">", "^"}, 
+	cyclic = true,
+	refresh_interval = 250,
+})
+
+
+
 EOF

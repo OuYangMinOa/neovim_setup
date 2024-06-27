@@ -79,7 +79,7 @@ nnoremap <C-s> <ESC>:w<CR>
 "inoremap <A-b> <Esc><p>
 
 " Alt-o o output
-nnoremap <A-o> ooutput l;
+nnoremap <A-o> ooutput =  
 
 " cltr up and down
 nnoremap <C-k> 4k
@@ -97,8 +97,8 @@ inoremap <C-down> <down><down><down><down>
 
 nnoremap <C-right> w
 nnoremap <C-left> b
-inoremap <C-right> w
-inoremap <C-left> b
+inoremap <C-right> <Esc>lwi
+inoremap <C-left> <Esc>lbi
 
 "undo tree
 nnoremap <A-e> :Telescope undo<CR>

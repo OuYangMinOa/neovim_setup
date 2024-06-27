@@ -19,6 +19,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'debugloop/telescope-undo.nvim'
 Plug 'lazywei/vim-doc-tw'
 Plug 'navarasu/onedark.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'pablopunk/native-sidebar.vim' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
@@ -27,15 +28,16 @@ call plug#end()
 lua require("toggleterm").setup()
 lua require("harpoon").setup({ ... })
 let g:onedark_config = {  
-    \ 'style': 'warm',  
+    \ 'style': 'warm', 'background' : 'dark'
 \}  
-colorscheme onedark
 let g:native_sidebar_shortcut = '<c-t>'
 set number
 set encoding=UTF-8
 set relativenumber
 set tabstop=4
 set shiftwidth=4
+set background=dark
+
 
 nnoremap <A-DOWN> :m .+1<CR>==
 nnoremap <A-UP> :m .-2<CR>==
@@ -75,7 +77,27 @@ nnoremap <C-s> <ESC>:w<CR>
 "map <C-c> <y>
 "inoremap <A-b> <Esc><p>
 
+" Alt-o o output
+nnoremap <A-o> ooutput l;
 
+" cltr up and down
+nnoremap <C-k> 4k
+nnoremap <C-j> 4j
+nnoremap <C-up> 4k
+nnoremap <C-down> 4j
+
+vnoremap <C-k> 4k
+vnoremap <C-j> 4j
+vnoremap <c-up> 4k
+vnoremap <c-down> 4j
+
+inoremap <C-up> <up><up><up><up>
+inoremap <C-down> <down><down><down><down>
+
+nnoremap <C-right> w
+nnoremap <C-left> b
+inoremap <C-right> w
+inoremap <C-left> b
 
 "undo tree
 nnoremap <A-e> :Telescope undo<CR>
@@ -99,6 +121,12 @@ require('tabnine').setup({
   log_file_path = nil, -- absolute path to Tabnine log file
 })
 
+require('telescope').setup{
+	defaults = {
+		file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "__pycache__"},
+	},
+}
+
 require("telescope").load_extension("undo")
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
@@ -118,4 +146,9 @@ require'treesitter-context'.setup{
   on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 }
 
+require("catppuccin").setup({
+flavour = "macchiato",
+transparent_background = true,
+})
+vim.cmd.colorscheme "catppuccin"
 EOF

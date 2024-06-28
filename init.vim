@@ -12,9 +12,9 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'codota/tabnine-nvim', { 'do': 'pwsh.exe -file ./dl_binaries.ps1' }
+Plug 'codota/tabnine-nvim', { 'do': 'pwsh.exe -file ./dl_binaries.ps1' }  " { 'do': './dl_binaries.sh' } fpr linux
 Plug 'tzachar/cmp-tabnine', { 'do': 'powershell ./install.ps1' }
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+"Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'debugloop/telescope-undo.nvim'
 Plug 'lazywei/vim-doc-tw'
@@ -26,7 +26,6 @@ Plug 'chentoast/marks.nvim'
 Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
-lua require("toggleterm").setup()
 lua require("harpoon").setup({ ... })
 let g:onedark_config = {  
     \ 'style': 'warm', 'background' : 'dark'
@@ -47,9 +46,10 @@ inoremap <A-UP> <Esc>:m .-2<CR>==gi
 vnoremap <A-UP> :m '<-2<CR>gv=gv
 vnoremap <A-DOWN> :m '>+1<CR>gv=gv
 
-nnoremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
-inoremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
-noremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
+"lua require("toggleterm").setup()
+"nnoremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
+"inoremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
+"noremap <C-w> :ToggleTerm size=10 dir=~/Desktop direction=horizontal name=desktop<CR><C-\><C-n>
 
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz

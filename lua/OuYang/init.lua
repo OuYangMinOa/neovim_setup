@@ -1,7 +1,11 @@
-print("Hello from Ouyang")
-
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- vim.keymap.set("n", "<A-j>", "gcl" )
+vim.g.mapleader = " " -- Set leader key before Lazy
 
 
+-- init.lua
+require("ouyang.set").setup()
+
+-- key.lua
+require("ouyang.key").setup()
+
+-- lazy_init.lua
+require("ouyang.lazy_init")

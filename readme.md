@@ -12,6 +12,20 @@
 
     [link to download](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 
+# Install ripgrep
+
+    - for linux
+
+        ```bash
+        sudo apt-get install ripgrep
+        ```
+
+    - for window
+
+        ```bash
+        winget install BurntSushi.ripgrep.MSVC
+        ```
+
 # Usage
 
 - for linux
@@ -28,17 +42,19 @@
 
 # Short key
 
-- Change lines `Alt + up\down`
+- Swap lines `Alt + up` `Alt+down`
 
 - Comment line `CTRL + /`
 
 - Search words in a file `CTRL + f`
 
+- Search word in a project `CTRL + H`, *required a ripgrep*
+
 - Save `CTRL + s`
 
-- Add `output=` ->  `Alt + o`
+- Add `output=` in code ->  `Alt + o`
 
-- Move up down `CTRL + up/downright/left/j/k` (`CTRL + L/H` have another binding)
+- Move up down `CTRL + up/downright/left/h/l` (`CTRL + j/k` have another binding)
 
 - Back to last cursor position `Alt + right/left`
 
@@ -50,7 +66,7 @@
 
 - Unfold all `CTRL + k + CTRL + j `
 
-- Fold/unfold this line `zc zr`
+- Fold/unfold this line `zc zr`x
 
 - Toggle file tree `CTRL + b`
 

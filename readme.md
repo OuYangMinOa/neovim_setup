@@ -17,13 +17,13 @@
 - for linux
 
     ```bash
-    git clone https://github.com/OuYangMinOa/neovim_setup ~/.config/neovim
+    git clone https://github.com/OuYangMinOa/neovim_setup ~/.config/nvim
     ```
 
 - for window
 
     ```bash
-    git clone https://github.com/OuYangMinOa/neovim_setup ~/AppData/Local/neovim
+    git clone https://github.com/OuYangMinOa/neovim_setup ~/AppData/Local/nvim
     ```
 
 # Short key

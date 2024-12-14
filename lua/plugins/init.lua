@@ -3,5 +3,6 @@ return {
     {require("plugins.lsp")},
     {require("plugins.harpoon") },
     {require("plugins.tree") },
-    {require("plugins.indent")}
+    {require("plugins.indent")  },
+    {require("plugins.fold")},
 }                                                                                       

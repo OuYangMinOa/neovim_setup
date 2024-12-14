@@ -35,14 +35,14 @@ function key.setup()
     vim.keymap.set('n', '<A-o>', 'ooutput = ', { noremap = true, silent = true })
 
     -- Ctrl 上下移動
-    vim.keymap.set('n', '<C-k>', '4k', { noremap = true, silent = true })
-    vim.keymap.set('n', '<C-j>', '4j', { noremap = true, silent = true })
+    -- vim.keymap.set('n', '<C-k>', '4k', { noremap = true, silent = true })
+    -- vim.keymap.set('n', '<C-j>', '4j', { noremap = true, silent = true })
     vim.keymap.set('n', '<C-up>', '4k', { noremap = true, silent = true })
     vim.keymap.set('n', '<C-down>', '4j', { noremap = true, silent = true })
 
     -- 在可視模式下上下移動
-    vim.keymap.set('v', '<C-k>', '4k', { noremap = true, silent = true })
-    vim.keymap.set('v', '<C-j>', '4j', { noremap = true, silent = true })
+    -- vim.keymap.set('v', '<C-k>', '4k', { noremap = true, silent = true })
+    -- vim.keymap.set('v', '<C-j>', '4j', { noremap = true, silent = true })
     vim.keymap.set('v', '<C-up>', '4k', { noremap = true, silent = true })
     vim.keymap.set('v', '<C-down>', '4j', { noremap = true, silent = true })
 
@@ -67,6 +67,8 @@ function key.setup()
     
     -- 搜尋var
     vim.keymap.set('n', "<f12>", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
+
+    
 end
 
 return key

@@ -1,4 +1,4 @@
-# Download
+# Download neovim
 
 - for linux
 

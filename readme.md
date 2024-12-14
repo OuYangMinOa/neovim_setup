@@ -14,17 +14,17 @@
 
 # Install ripgrep
 
-    - for linux
+- for linux
 
-        ```bash
-        sudo apt-get install ripgrep
-        ```
+    ```bash
+    sudo apt-get install ripgrep
+    ```
 
-    - for window
+- for window
 
-        ```bash
-        winget install BurntSushi.ripgrep.MSVC
-        ```
+    ```bash
+    winget install BurntSushi.ripgrep.MSVC
+    ```
 
 # Usage
 

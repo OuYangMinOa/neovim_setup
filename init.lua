@@ -1,2 +1,2 @@
-require("ouyang")
+require("OuYang")
 

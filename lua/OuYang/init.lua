@@ -2,10 +2,10 @@ vim.g.mapleader = " " -- Set leader key before Lazy
 
 
 -- init.lua
-require("ouyang.set").setup()
+require("OuYang.set").setup()
 
 -- key.lua
-require("ouyang.key").setup()
+require("OuYang.key").setup()
 
 -- lazy_init.lua
-require("ouyang.lazy_init")
+require("OuYang.lazy_init")

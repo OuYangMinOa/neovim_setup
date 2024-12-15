@@ -68,7 +68,13 @@
 
 - Fold/unfold this line `zc zr`x
 
-- Toggle file tree `CTRL + b`
+- file tree
+
+    - Toggle file tree `CTRL + b`
+
+    - file tree help `?`
+
+    - expand all `CTRL + Alt + e`
 
 - Toggle terminal `CTRL + \`
 

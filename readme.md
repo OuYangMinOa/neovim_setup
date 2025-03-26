@@ -25,19 +25,47 @@
     ```bash
     winget install BurntSushi.ripgrep.MSVC
     ```
+# Install npm
 
-# Usage
+#### Download node [link](https://nodejs.org/zh-tw/download) 
+
+- linux
+
+    ```
+    curl -o- https://fnm.vercel.app/install | bash
+    fnm install 22
+    node -v 
+    npm -v
+    ```
+
+- windows
+    ```
+    winget install Schniz.fnm
+    ```
+    Reopen the terminal
+    ```
+    fnm install 22
+    ```
+    Reopen the terminal again
+    ```
+    node -v
+    npm -v 
+    ```
+
+# Download
 
 - for linux
 
     ```bash
-    git clone https://github.com/OuYangMinOa/neovim_setup ~/.config/nvim
+    cd ~/.config
+    git clone https://github.com/OuYangMinOa/neovim_setup nvim
     ```
 
 - for window
 
     ```bash
-    git clone https://github.com/OuYangMinOa/neovim_setup ~/AppData/Local/nvim
+    cd ~/AppData/Local
+    git clone https://github.com/OuYangMinOa/neovim_setup nvim
     ```
 
 # Short key

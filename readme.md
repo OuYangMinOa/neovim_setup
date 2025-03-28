@@ -46,13 +46,13 @@
     ```
     fnm install 22
     ```
-    Reopen the terminal again
+    Reopen the terminal again, check the installation
     ```
     node -v
     npm -v 
     ```
 
-- Install gcc
+# Install gcc
 
 - linux 
 
@@ -66,12 +66,12 @@
     ```
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
-    reopen powershell with administrative
+    reopen powershell with administrative and install the mingw
     ```
     choco install mingw
     ```
 
-# Download
+# Download my neovim config
 
 - for linux
 

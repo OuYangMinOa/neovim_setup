@@ -5,4 +5,6 @@ return {
     {require("plugins.tree") },
     {require("plugins.indent")  },
     {require("plugins.fold")},
+    {require("plugins.style")},
+
 }                                                                                       

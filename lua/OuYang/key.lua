@@ -25,8 +25,8 @@ function key.setup()
     vim.keymap.set('i', '<C-CR>', '<C-y><Left><Right>', { noremap = true, silent = true })
 
     -- 保存文件
-    vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>', { noremap = true, silent = true })
-    vim.keymap.set('n', '<C-s>', '<Esc>:w<CR>', { noremap = true, silent = true })
+    vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
+    vim.keymap.set('n', '<C-s>', '<Esc>:w<CR>' , { noremap = true, silent = true })
 
     -- 將 <C-c> 映射到 <y>
     -- vim.keymap.set('i', '<C-c>', '<y>', { noremap = true, silent = true }) -- 如果需要的話可以取消註解
@@ -60,10 +60,10 @@ function key.setup()
     vim.keymap.set('n', '<f2>', vim.lsp.buf.rename, { noremap = true, silent = true })
     
     -- 回到鼠標上一個位置
-    vim.keymap.set('n', '<A-left>', "<C-i>zz", { noremap = true, silent = true })
-    vim.keymap.set('n', '<A-right>', "<C-o>zz", { noremap = true, silent = true })
-    vim.keymap.set('i', '<A-left>', "<C-i>zz", { noremap = true, silent = true })
-    vim.keymap.set('i', '<A-right>', "<C-o>zz", { noremap = true, silent = true })
+    vim.keymap.set('n', '<A-right>', "<C-i>zz", { noremap = true, silent = true })
+    vim.keymap.set('n', '<A-left>', "<C-o>zz", { noremap = true, silent = true })
+    vim.keymap.set('i', '<A-right>', "<C-i>zz", { noremap = true, silent = true })
+    vim.keymap.set('i', '<A-left>', "<C-o>zz", { noremap = true, silent = true })
     
     -- 搜尋var
     vim.keymap.set('n', "<f12>", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })

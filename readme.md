@@ -121,7 +121,7 @@
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
     ```
-    
+
     Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
     ```
     Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
@@ -154,6 +154,28 @@ I'm using `amro`, you can choose your favorite in [here](https://ohmyposh.dev/do
     export PATH=$PATH:~/.local/bin
     echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
     source ~/.bashrc
+    ```
+
+### My git config
+
+    ```bash
+    [alias]
+        st  = status
+        poh = push origin head
+        co  = checkout
+        c   = commit
+        cm  = commit -m
+        br  = branch
+        ca  = "!f(){ git add . \"$1\" && git commit -m 'update'; };f"
+        cam = "!f(){ git add . \"$1\" && git commit -m ; };f"
+        sta = remote show origin
+    [color]  
+        diff = auto  
+        status = auto  
+        branch = auto 
+    [branch]  
+        autosetuprebase = always
+
     ```
 
 # Short key

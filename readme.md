@@ -114,7 +114,20 @@
 # Install useful toos
 
 ### [fzf](https://github.com/junegunn/fzf)
+
+- [windows](https://sathyasays.com/2023/04/11/powershell-fzf-psfzf/)
+
+    ```bash
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+    ```
     
+    Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+    ```
+    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+    ```
+    
+- linux 
     ```bash
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
@@ -128,15 +141,9 @@ I'm using `amro`, you can choose your favorite in [here](https://ohmyposh.dev/do
     ```bash
     winget install JanDeDobbeleer.OhMyPosh -s winget
     oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
-    cd ~\Documents\WindowsPowerShell\
     ```
 
-    If the powershell config not exsit
-    ```bash
-    new-item -type file -path $profile -force
-    ```
-
-    Add the following config in the end of you powershell config
+    Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
     ```bash
     oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
     ```

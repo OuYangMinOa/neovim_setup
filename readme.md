@@ -60,6 +60,7 @@
     1. unzip and right click the font.
     2. Select "Show more options".
     3. Select "Install for all users".
+    4. Change the font of your terminal.
 
 - linux
     ```bash
@@ -107,58 +108,58 @@
 
 # Open nvim
 
-    ```bash
-    nvim .
-    ```
+```bash
+nvim .
+```
 
 # Install useful toos
 
-### [fzf](https://github.com/junegunn/fzf)
+* ### [fzf](https://github.com/junegunn/fzf)
 
-- [windows](https://sathyasays.com/2023/04/11/powershell-fzf-psfzf/)
+    - [windows](https://sathyasays.com/2023/04/11/powershell-fzf-psfzf/)
 
-    ```bash
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-    ```
+        ```bash
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install
+        ```
 
-    Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
-    ```
-    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
-    ```
-    
-- linux 
-    ```bash
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-    ```
+        Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+        ```
+        Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+        ```
+        
+    - linux 
+        ```bash
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install
+        ```
 
-### [oh my posh](https://ohmyposh.dev/)
+- ### [oh my posh](https://ohmyposh.dev/)
 
-I'm using `amro`, you can choose your favorite in [here](https://ohmyposh.dev/docs/themes).
+    I'm using `amro`, you can choose your favorite in [here](https://ohmyposh.dev/docs/themes).
 
-- windows
-    ```bash
-    winget install JanDeDobbeleer.OhMyPosh -s winget
-    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
-    ```
+    - windows
+        ```bash
+        winget install JanDeDobbeleer.OhMyPosh -s winget
+        oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
+        ```
 
-    Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
-    ```bash
-    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
-    ```
+        Paste the below command to `~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+        ```bash
+        oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
+        ```
 
-- linux 
-    ```bash
-    curl -s https://ohmyposh.dev/install.sh | bash -s
-    export PATH=$PATH:~/.local/bin
-    echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
-    source ~/.bashrc
-    ```
+    - linux 
+        ```bash
+        curl -s https://ohmyposh.dev/install.sh | bash -s
+        export PATH=$PATH:~/.local/bin
+        echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
+        source ~/.bashrc
+        ```
 
-### My git config
+- ### My git config
 
-    ```bash
+    ```toml
     [alias]
         st  = status
         poh = push origin head

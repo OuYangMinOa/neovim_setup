@@ -2,19 +2,19 @@
 
 #### Here is my neovim setup, you can follow the instructions to achieve a similar look.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ![
     oh-my-posh /w py env
-](image-5.png)
+](images/image-5.png)
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 # Download [neovim](https://neovim.io/)
 

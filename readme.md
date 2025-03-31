@@ -4,6 +4,10 @@
 
 ![alt text](image.png)
 
+![
+    oh-my-posh /w py env
+](image-5.png)
+
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)

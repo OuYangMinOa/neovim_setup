@@ -4,9 +4,14 @@ return {
     },
     {
         "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        ---@module "ibl"
-        ---@type ibl.config
-        opts = {},
+        config = function()
+            local highlights = {}
+            local opts = {
+                indent = {
+                    char = '▏',
+                },
+            }
+            require("ibl").setup(opts)
+        end,
     }
 }

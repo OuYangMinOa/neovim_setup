@@ -128,7 +128,7 @@ nvim .
 
 # Install useful toos
 
-* ### [fzf](https://github.com/junegunn/fzf)
+* ### [FZF](https://github.com/junegunn/fzf)
 
     - [windows](https://sathyasays.com/2023/04/11/powershell-fzf-psfzf/)
 
@@ -148,9 +148,10 @@ nvim .
         ~/.fzf/install
         ```
 
-- ### [oh my posh](https://ohmyposh.dev/)
+- ### [Oh my posh](https://ohmyposh.dev/)
 
-    I'm using `amro`, you can choose your favorite in [here](https://ohmyposh.dev/docs/themes).
+    I'm using my own scehame that modify from `armo`, you can choose your favorite in [here](https://ohmyposh.dev/docs/themes).
+
 
     - windows
         ```bash
@@ -163,27 +164,46 @@ nvim .
         oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\amro.omp.json" | Invoke-Expression
         ```
 
+        If you are using my `armo`
+        ```bash
+        oh-my-posh init pwsh --config "~/AppData/Local/nvim/myarmo.json" | Invoke-Expression
+        ```
+
     - linux 
         ```bash
         curl -s https://ohmyposh.dev/install.sh | bash -s
+        ```
+
+        Add following command to `~/.bashrc`
+        ```bash
         export PATH=$PATH:~/.local/bin
         echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
+        ```
+
+        And run
+        ```bash
         source ~/.bashrc
         ```
 
 - ### My git config
 
+    Paste the following content to ~/.gitconfig
     ```toml
     [alias]
-        st  = status
-        poh = push origin head
-        co  = checkout
-        c   = commit
-        cm  = commit -m
-        br  = branch
-        ca  = "!f(){ git add . \"$1\" && git commit -m 'update'; };f"
-        cam = "!f(){ git add . \"$1\" && git commit -m ; };f"
-        sta = remote show origin
+        poh  = push origin HEAD
+        sta  = remote -v show origin
+        co   = checkout
+        ci   = commit
+        st   = status
+        br   = branch
+        c    = commit -m "update"
+        ca   = "!f() { git add . && git commit -m \"update\"; }; f"
+        cn   = commit --no-verify -m "update"
+        cm   = commit -m
+        cam  = "!f() { git add . && git commit -m \"$1\"; }; f"
+        cnm  = commit --no-verify -m
+        cna  = commit --no-verify -am "update" 
+        cnam = commit --no-verify -am
     [color]  
         diff = auto  
         status = auto  

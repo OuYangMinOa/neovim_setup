@@ -51,7 +51,7 @@
 
     ```bash
     curl -o- https://fnm.vercel.app/install | bash
-    fnm install 22
+    /root/.local/share/fnm/fnm install 22
     node -v 
     npm -v
     ```
@@ -81,6 +81,7 @@
     4. Change the font of your terminal.
 
 - linux
+    Choose your own nerd font
     ```bash
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
     ```
@@ -91,8 +92,7 @@
 - linux 
 
     ```bash
-    sudo apt install gcc
-    sudo apt-get install unzip
+    sudo apt install -y gcc unzip
     ```
 
 - windows
@@ -113,7 +113,7 @@
     ```bash
     mkdir ~/.config
     cd ~/.config
-    git clone https://github.com/OuYangMinOa/neovim_setup nvim
+    git clone https://github.com/OuYangMinOa/neovim_setup ~/.config/nvim
     ```
 
 - for window
@@ -149,7 +149,7 @@ nvim .
     - linux 
         ```bash
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-        ~/.fzf/install
+        ~/.fzf/install --key-bindings --completion --update-rc
         ```
 
 - ### [Oh my posh](https://ohmyposh.dev/)
@@ -178,9 +178,9 @@ nvim .
         curl -s https://ohmyposh.dev/install.sh | bash -s
         ```
 
-        Add following command to `~/.bashrc`
+        Run following command to add command `~/.bashrc`
         ```bash
-        export PATH=$PATH:~/.local/bin
+        echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
         echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
         ```
 
@@ -188,6 +188,26 @@ nvim .
         ```bash
         source ~/.bashrc
         ```
+
+- ### [zellij](https://zellij.dev/documentation/installation)
+
+    - Install [rust](https://www.rust-lang.org/)
+    
+        ```bash
+        curl https://sh.rustup.rs -sSf | bash -s -- -y
+        echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+        /root/.cargo/bin/cargo install --locked zellij
+        ```
+
+- ### [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+    - linux
+
+        ```
+        sudo apt install -y zoxide
+        echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+        ```
+
 
 - ### My git config
 

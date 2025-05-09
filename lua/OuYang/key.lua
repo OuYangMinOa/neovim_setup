@@ -29,6 +29,9 @@ function key.setup()
     vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
     vim.keymap.set('n', '<C-s>', '<Esc>:w<CR>' , { noremap = true, silent = true })
 
+    -- 鼠標到中間
+    vim.keymap.set('n', 'mm', 'M' , { noremap = true, silent = true })
+
     -- 將 <C-c> 映射到 <y>
     -- vim.keymap.set('i', '<C-c>', '<y>', { noremap = true, silent = true }) -- 如果需要的話可以取消註解
 

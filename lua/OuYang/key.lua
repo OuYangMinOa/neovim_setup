@@ -19,8 +19,8 @@ function key.setup()
     vim.keymap.set('i', '<C-_>', 'gcl', { remap = true })
 
     -- 使用 Ctrl-f 搜索單詞
-    vim.keymap.set('n', '<C-f>', '<Esc>/', { noremap = true, silent = true })
-    vim.keymap.set('i', '<C-f>', '<Esc>/', { noremap = true, silent = true })
+    vim.keymap.set('n', '<C-f>', '<Esc>/', { remap = true })
+    vim.keymap.set('i', '<C-f>', '<Esc>/', { remap = true })
 
     -- 選擇自動完成
     vim.keymap.set('i', '<C-CR>', '<C-y><Left><Right>', { noremap = true, silent = true })

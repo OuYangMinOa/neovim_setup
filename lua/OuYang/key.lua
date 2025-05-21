@@ -71,7 +71,7 @@ function key.setup()
     
     -- 搜尋var
     vim.keymap.set('n', "<f12>", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
-
+	vim.keymap.set('n', '<A-k>', ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
     
 end
 

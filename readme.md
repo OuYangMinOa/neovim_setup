@@ -257,6 +257,8 @@ nvim .
 
 - Go to definition `f12`
 
+- Show error message `Alt-k`
+
 - Rename variables `f2`
 
 - Fold with level `CTRL + k + 0~4` will fold indent with 0~4 level

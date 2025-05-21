@@ -7,10 +7,16 @@ return {
             require('ufo').setup()
             local ufo = require('ufo')
             
-            vim.o.foldcolumn = '1'
-            vim.o.foldlevel = 99
-            vim.o.foldmethod = 'indent'
-            vim.o.foldenable = true
+            vim.o.foldcolumn     = '1'
+            vim.o.foldlevel      = 99
+            vim.o.foldlevelstart = 99   
+            vim.o.foldenable     = true 
+
+            require('ufo').setup({
+            provider_selector = function(_, filetype)
+                return { 'treesitter', 'indent' }
+            end,
+            })
             
             vim.keymap.set('n', '<C-k>0', function() require('ufo').closeFoldsWith(0) end)
             vim.keymap.set('n', '<C-k>1', function() require('ufo').closeFoldsWith(1) end)

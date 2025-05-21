@@ -47,6 +47,7 @@ return {
             callback = function()
                 -- devicons v0.12 之後有 refresh()；舊版可以再跑一次 setup()
                 require("nvim-web-devicons").refresh()
+                require("nvim-web-devicons").setup({color_icons = true})
             end,
             })
         end

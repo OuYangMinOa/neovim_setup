@@ -9,3 +9,6 @@ require("OuYang.key").setup()
 
 -- lazy_init.lua
 require("OuYang.lazy_init")
+
+
+require("nvim-web-devicons").refresh()

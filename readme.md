@@ -181,7 +181,7 @@ nvim .
         Run following command to add command `~/.bashrc`
         ```bash
         echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
-        echo 'eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"' >> ~/.bashrc
+        echo 'eval "$(oh-my-posh init bash --config ~/.config/nvim/myarmo.json)"' >> ~/.bashrc
         ```
 
         And run

@@ -1,5 +1,5 @@
 vim.g.mapleader = " " -- Set leader key before Lazy
-
+vim.opt.termguicolors = true
 
 -- init.lua
 require("OuYang.set").setup()

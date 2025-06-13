@@ -73,7 +73,9 @@ function key.setup()
     vim.keymap.set('n', "<f12>", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
     vim.keymap.set('n', "<f10>", "<cmd>Telescope lsp_references<CR>", { noremap = true, silent = true })
 	vim.keymap.set('n', '<A-k>', ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
-    
+    vim.keymap.set("n", "<f9>", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<f8>", vim.lsp.buf.code_action, { noremap = true, silent = true })
+
 end
 
 return key

@@ -59,6 +59,12 @@ function key.setup()
     vim.keymap.set('n', '<C-left>', 'b', { noremap = true, silent = true })
     vim.keymap.set('i', '<C-right>', '<Esc>lwi', { noremap = true, silent = true })
     vim.keymap.set('i', '<C-left>', '<Esc>lbi', { noremap = true, silent = true })
+
+	-- 在畫面中移動光標
+    vim.keymap.set('n', '<A-C-right>', '<C-w><right>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<A-C-left>', '<C-w><left>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<A-C-up>', '<C-w><up>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<A-C-down>', '<C-w><down>', { noremap = true, silent = true })
     
     -- 重新命名
     vim.keymap.set('n', '<f2>', vim.lsp.buf.rename, { noremap = true, silent = true })
